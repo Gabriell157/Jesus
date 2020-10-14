@@ -2,6 +2,11 @@
 
 function combateAtaque(atacante, defensor) {
   const montante = (atacante.ataque + atacante.arma.bonus - defensor.defesa - defensor.escudo.bonus)
+
+  if (montante < 0) {
+    return 0
+  }
+  
   return montante
 }
 
